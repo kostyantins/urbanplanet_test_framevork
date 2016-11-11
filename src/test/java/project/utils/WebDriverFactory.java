@@ -9,9 +9,12 @@ import project.enums.Browsers;
 @Getter
 public class WebDriverFactory {
 
-    WebDriver driver;
+   private WebDriver driver;
 
     public WebDriver getDriver(final Browsers browsers) {
+
+        final String chromeDriver = PropertiesReader.getDefaultProperty("chrome.driver.name");
+        final String chromeDriverPath = PropertiesReader.getDefaultProperty("chrome.driver.path");
 
         switch (browsers) {
 
@@ -20,10 +23,9 @@ public class WebDriverFactory {
                 break;
 
             case CHROME:
+                System.setProperty(chromeDriver, chromeDriverPath);
                 driver = new ChromeDriver();
-                System.setProperty("webdriver.chrome.driver", "src//resources//drivers//chromedriver");
         }
-
         return driver;
     }
 }

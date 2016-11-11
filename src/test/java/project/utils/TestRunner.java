@@ -8,6 +8,7 @@ import project.enums.Browsers;
 
 import java.util.concurrent.TimeUnit;
 
+import static project.enums.Browsers.CHROME;
 import static project.enums.Browsers.FIREFOX;
 
 public class TestRunner {
@@ -19,7 +20,7 @@ public class TestRunner {
 
         WebDriverFactory webDriverFactory = new WebDriverFactory();
 
-        driver = webDriverFactory.getDriver(FIREFOX);
+        driver = webDriverFactory.getDriver(CHROME);
 
         driver
                 .get("https://urbanplanet-streetwear.com");
