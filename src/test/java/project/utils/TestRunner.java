@@ -1,5 +1,6 @@
 package project.utils;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -13,6 +14,7 @@ import static project.enums.Browsers.FIREFOX;
 
 public class TestRunner {
 
+    @Getter
     protected WebDriver driver;
 
     @BeforeMethod
