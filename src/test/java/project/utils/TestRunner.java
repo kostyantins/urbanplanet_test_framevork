@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import project.enums.Browsers;
+import project.pageobjects.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +14,8 @@ import static project.enums.Browsers.CHROME;
 import static project.enums.Browsers.FIREFOX;
 
 public class TestRunner {
+
+    protected HomePage homePage;
 
     @Getter
     protected WebDriver driver;
@@ -31,6 +34,8 @@ public class TestRunner {
                 .manage()
                 .timeouts()
                 .implicitlyWait(30, TimeUnit.SECONDS);
+
+        homePage = new HomePage(driver);
     }
 
     @AfterMethod
