@@ -1,5 +1,6 @@
 package project.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import project.utils.TestRunner;
 
@@ -10,7 +11,6 @@ public class HomePageClockExistTest extends TestRunner {
     @Test
     public final void testHomePageClockExist() {
 
-        homePage
-                .isExist(CLOCK);
+        Assert.assertTrue(homePage.getClock().isDisplayed());
     }
 }
