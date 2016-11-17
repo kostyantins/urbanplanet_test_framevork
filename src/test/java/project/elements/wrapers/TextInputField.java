@@ -7,7 +7,7 @@ import project.utils.Logger;
 
 public class TextInputField extends AbstractClickableElement {
 
-    TextInputField(WebDriver driver, ILocator locator) {
+    public TextInputField(WebDriver driver, ILocator locator) {
 
         super(driver, locator);
     }

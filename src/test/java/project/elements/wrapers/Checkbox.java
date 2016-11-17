@@ -6,8 +6,7 @@ import project.elements.interfaces.ILocator;
 
 public class Checkbox extends AbstractClickableElement<Checkbox> {
 
-    Checkbox(WebDriver driver, ILocator locator) {
-
+    public Checkbox(WebDriver driver, ILocator locator) {
         super(driver, locator);
     }
 

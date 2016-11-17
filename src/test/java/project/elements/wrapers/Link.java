@@ -3,9 +3,9 @@ package project.elements.wrapers;
 import org.openqa.selenium.WebDriver;
 import project.elements.interfaces.ILocator;
 
-public class TextLabel extends AbstractElement {
+public class Link extends AbstractClickableElement {
 
-    public TextLabel(WebDriver driver, ILocator locator) {
+    public Link(WebDriver driver, ILocator locator) {
         super(driver, locator);
     }
 }

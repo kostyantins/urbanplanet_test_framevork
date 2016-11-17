@@ -1,7 +1,10 @@
 package project.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import project.elements.locators.UserOfficePageLocators;
+import project.elements.wrapers.Button;
+import project.elements.wrapers.TextInputField;
+import project.utils.PropertiesReader;
 
 public class UserOfficePage extends PageObject<UserOfficePage> {
 
@@ -10,10 +13,27 @@ public class UserOfficePage extends PageObject<UserOfficePage> {
         super(driver);
     }
 
-    public static final By LOG_IN_TEXT_FIELD = By.id("user_login");
+    private final Button logInButton = new Button(driver, UserOfficePageLocators.LOG_IN_BUTTON);
+    private final TextInputField logLnTextField = new TextInputField(driver, UserOfficePageLocators.LOG_IN_TEXT_FIELD);
+    private final TextInputField passwordTextField = new TextInputField(driver, UserOfficePageLocators.PASSWORD_TEXT_FIELD);
 
-    public static final By PASSWORD_TEXT_FIELD = By.id("user_pass");
+    public final HomePage logIn() {
 
-    public static final By LOG_IN_BUTTON = By.name("Login");
+        final String userName = PropertiesReader.getProperty("valid.login");
+        final String userPassword = PropertiesReader.getProperty("valid.password");
+
+        logLnTextField
+                .clear()
+                .sendKeys(userName);
+
+        passwordTextField
+                .clear()
+                .sendKeys(userPassword);
+
+        logInButton
+                .click();
+
+        return new HomePage(driver);
+    }
 
 }

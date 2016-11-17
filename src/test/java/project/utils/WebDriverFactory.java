@@ -13,8 +13,8 @@ public class WebDriverFactory {
 
     public WebDriver getDriver(final Browsers browsers) {
 
-        final String chromeDriver = PropertiesReader.getDefaultProperty("chrome.driver.name");
-        final String chromeDriverPath = PropertiesReader.getDefaultProperty("chrome.driver.path");
+        final String chromeDriver = PropertiesReader.getProperty("chrome.driver.name");
+        final String chromeDriverPath = PropertiesReader.getProperty("chrome.driver.path");
 
         switch (browsers) {
 

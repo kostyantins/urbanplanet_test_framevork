@@ -6,12 +6,11 @@ import project.elements.interfaces.ILocator;
 
 public enum HomePageLocators implements ILocator {
 
-
-    LOGO("Logo", LocatorsType.BY_XPATH, "//*[@id='wpo-mainnav']//a/img"),
-
     //unique page locator for page identification
     CLOCK("Clock", LocatorsType.BY_XPATH, "(//*[@id='wpo-mainnav']//img)[2]"),
-    NEWS_ALERT_WINDOW("News alert window", LocatorsType.BY_XPATH, "//*[@id='subscribe-form']");
+    LOGO("Logo", LocatorsType.BY_XPATH, "//*[@id='wpo-mainnav']//a/img"),
+    NEWS_ALERT_WINDOW("News alert window", LocatorsType.BY_XPATH, "//*[@id='subscribe-form']"),
+    USER_OFFICE_PAGE_LINK("User office page link", LocatorsType.BY_XPATH, "(//*[@id='topbar']//a[1])[6]");
 
     private String elementName;
     private LocatorsType locatorType;

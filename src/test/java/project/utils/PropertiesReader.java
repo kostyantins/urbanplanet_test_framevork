@@ -11,7 +11,7 @@ public final class PropertiesReader {
 
     private static final String CONFIG_PROPERTIES = "src//resources/config.properties";
 
-    public static String getDefaultProperty(final String propertyName) {
+    public static String getProperty(final String propertyName) {
 
         String propertyValue = null;
 
@@ -34,7 +34,7 @@ public final class PropertiesReader {
 
 //    private static final String CONFIG_PROPERTIES = "config.properties";
 //
-//    public static String getDefaultProperty(final String propertyName) {
+//    public static String getProperty(final String propertyName) {
 //
 //        String propertyValue = null;
 //

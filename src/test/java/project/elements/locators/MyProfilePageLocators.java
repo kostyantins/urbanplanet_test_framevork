@@ -4,19 +4,18 @@ import org.openqa.selenium.By;
 import project.elements.LocatorsType;
 import project.elements.interfaces.ILocator;
 
-public enum UserOfficePageLocators implements ILocator {
+public enum MyProfilePageLocators implements ILocator {
+
 
     //unique page locator for page identification
-    LOG_IN_BUTTON("Log in button", LocatorsType.BY_NAME, "Login"),
-    LOG_IN_TEXT_FIELD("Log in text field", LocatorsType.BY_ID, "user_login"),
-    PASSWORD_TEXT_FIELD("Password text field", LocatorsType.BY_ID, "user_pass");
+    MY_PROFILE_TEXT_LABEL("My profile text label",LocatorsType.BY_XPATH, "//*[@id='breadcrumb']/span[2]");
 
     private String elementName;
     private LocatorsType locatorType;
     private String locatorValue;
     private String modifiedLocator;
 
-    UserOfficePageLocators(final String elementName, final LocatorsType locatorType, final String locatorValue) {
+    MyProfilePageLocators(final String elementName, final LocatorsType locatorType, final String locatorValue) {
 
         this.elementName = elementName;
         this.locatorType = locatorType;
@@ -43,7 +42,7 @@ public enum UserOfficePageLocators implements ILocator {
     }
 
     @Override
-    public UserOfficePageLocators modify(final String parameter) {
+    public MyProfilePageLocators modify(final String parameter) {
 
         this.modifiedLocator = String.format(this.locatorValue, parameter);
 
