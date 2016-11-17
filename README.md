@@ -1,1 +1,1 @@
-Test automation framework for OMS application. 
+Test automation framework for Urban Planet application. 
