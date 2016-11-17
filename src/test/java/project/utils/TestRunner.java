@@ -30,11 +30,6 @@ public class TestRunner {
         driver
                 .get("https://urbanplanet-streetwear.com");
 
-        driver
-                .manage()
-                .timeouts()
-                .implicitlyWait(30, TimeUnit.SECONDS);
-
         homePage = new HomePage(driver);
     }
 

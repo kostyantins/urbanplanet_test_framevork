@@ -10,7 +10,7 @@ public enum HomePageLocators implements ILocator {
     LOGO("Logo", LocatorsType.BY_XPATH, "//*[@id='wpo-mainnav']//a/img"),
 
     //unique page locator for page identification
-    CLOCK("Clock", LocatorsType.BY_XPATH, "//*[@id='wpo-mainnav']//img)[2]"),
+    CLOCK("Clock", LocatorsType.BY_XPATH, "(//*[@id='wpo-mainnav']//img)[2]"),
     NEWS_ALERT_WINDOW("News alert window", LocatorsType.BY_XPATH, "//*[@id='subscribe-form']");
 
     private String elementName;
