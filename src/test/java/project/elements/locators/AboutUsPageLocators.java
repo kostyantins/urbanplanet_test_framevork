@@ -7,7 +7,7 @@ import project.elements.interfaces.ILocator;
 public enum AboutUsPageLocators implements ILocator {
 
     //unique page locator for page identification
-    ABOUT_UA("About us", LocatorsType.BY_XPATH, "//*[@id='post-587']/h1");
+    ABOUT_UA_TEXT_LABEL("About us text label", LocatorsType.BY_XPATH, "//*[@id='post-587']/h1");
 
     private String elementName;
     private LocatorsType locatorType;

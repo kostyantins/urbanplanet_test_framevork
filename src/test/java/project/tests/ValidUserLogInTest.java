@@ -12,7 +12,9 @@ public class ValidUserLogInTest extends TestRunner {
         homePage
                 .goToUserOfficePage();
 
-        userOfficePage = new UserOfficePage(driver)
+        userOfficePage = new UserOfficePage(driver);
+
+        userOfficePage
                 .logIn();
 
         homePage

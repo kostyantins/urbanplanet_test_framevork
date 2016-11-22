@@ -24,7 +24,7 @@ public class TestRunner {
     protected MyProfilePage myProfilePage;
     protected RegistrationPage registrationPage;
     protected ShopsPage shopsPage;
-    protected HomePage userOfficePage;
+    protected UserOfficePage userOfficePage;
     protected WomanClothesPage womanClothesPage;
 
     @Getter

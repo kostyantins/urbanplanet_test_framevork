@@ -2,17 +2,21 @@ package project.asserts;
 
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import project.elements.wrapers.AbstractElement;
+import project.elements.wrapers.AbstractClickableElement;
 
 import static project.utils.Logger.logFail;
 import static project.utils.Logger.logPass;
 
 public class AbstractElementAssert {
 
-    protected AbstractElement actual;
+    protected AbstractClickableElement actual;
 
-    AbstractElementAssert(final AbstractElement actual) {
+    AbstractElementAssert(final AbstractClickableElement actual) {
         this.actual = actual;
+    }
+
+    public static final AbstractElementAssert assertThat(final AbstractClickableElement actual) {
+        return new AbstractElementAssert(actual);
     }
 
     public final AbstractElementAssert isDisplayed() {

@@ -9,7 +9,7 @@ import project.enums.Browsers;
 @Getter
 public class WebDriverFactory {
 
-   private WebDriver driver;
+    private WebDriver driver;
 
     public WebDriver getDriver(final Browsers browsers) {
 
@@ -18,13 +18,14 @@ public class WebDriverFactory {
 
         switch (browsers) {
 
-            case FIREFOX:
-                driver = new FirefoxDriver();
-                break;
-
             case CHROME:
                 System.setProperty(chromeDriver, chromeDriverPath);
                 driver = new ChromeDriver();
+
+            default:
+            case FIREFOX:
+                driver = new FirefoxDriver();
+                break;
         }
         return driver;
     }

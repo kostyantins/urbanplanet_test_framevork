@@ -1,13 +1,13 @@
 package project.asserts;
 
-import project.elements.wrapers.AbstractElement;
+import project.elements.wrapers.AbstractClickableElement;
 
-public class FluentAssertions {
+public final class FluentAssertions {
 
     private FluentAssertions() {
     }
 
-    public static final AbstractElementAssert assertThat(final AbstractElement actual) {
+    public static final AbstractElementAssert assertThat(final AbstractClickableElement actual) {
         return new AbstractElementAssert(actual);
     }
 

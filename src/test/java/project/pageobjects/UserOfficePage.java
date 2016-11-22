@@ -1,11 +1,14 @@
 package project.pageobjects;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import project.elements.locators.UserOfficePageLocators;
 import project.elements.wrapers.Button;
+import project.elements.wrapers.Link;
 import project.elements.wrapers.TextInputField;
 import project.utils.PropertiesReader;
 
+@Getter
 public class UserOfficePage extends PageObject<UserOfficePage> {
 
 
@@ -16,6 +19,7 @@ public class UserOfficePage extends PageObject<UserOfficePage> {
     private final Button logInButton = new Button(driver, UserOfficePageLocators.LOG_IN_BUTTON);
     private final TextInputField logLnTextField = new TextInputField(driver, UserOfficePageLocators.LOG_IN_TEXT_FIELD);
     private final TextInputField passwordTextField = new TextInputField(driver, UserOfficePageLocators.PASSWORD_TEXT_FIELD);
+    private final Link userOfficePageLogo = new Link(driver, UserOfficePageLocators.USER_OFFICE_PAGE_LOGO);
 
     public final HomePage logIn() {
 

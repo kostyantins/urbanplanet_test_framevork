@@ -9,7 +9,8 @@ public enum UserOfficePageLocators implements ILocator {
     //unique page locator for page identification
     LOG_IN_BUTTON("Log in button", LocatorsType.BY_NAME, "Login"),
     LOG_IN_TEXT_FIELD("Log in text field", LocatorsType.BY_ID, "user_login"),
-    PASSWORD_TEXT_FIELD("Password text field", LocatorsType.BY_ID, "user_pass");
+    PASSWORD_TEXT_FIELD("Password text field", LocatorsType.BY_ID, "user_pass"),
+    USER_OFFICE_PAGE_LOGO("User office page logo", LocatorsType.BY_XPATH, "//*[@id='login']//a");
 
     private String elementName;
     private LocatorsType locatorType;
