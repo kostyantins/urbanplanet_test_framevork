@@ -2,6 +2,7 @@ package project.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public final class PropertiesReader {
@@ -15,7 +16,7 @@ public final class PropertiesReader {
 
         String propertyValue = null;
 
-        try (final FileInputStream fileInputStream = new FileInputStream(CONFIG_PROPERTIES)){
+        try (final InputStream fileInputStream = new FileInputStream(CONFIG_PROPERTIES)){
 
             final Properties property = new Properties();
 

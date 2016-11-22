@@ -2,12 +2,15 @@ package project.pageobjects;
 
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import project.elements.locators.AboutUsPageLocators;
 import project.elements.locators.HomePageLocators;
 import project.elements.wrapers.AbstractClickableElement;
 import project.elements.wrapers.Element;
 import project.elements.wrapers.Link;
 import project.utils.PropertiesReader;
+
+import static project.asserts.FluentAssertions.assertThat;
 
 @Getter
 public class HomePage extends PageObject<HomePage> {
@@ -16,7 +19,6 @@ public class HomePage extends PageObject<HomePage> {
         super(driver);
     }
 
-    private final Element logo = new Element(driver, HomePageLocators.HOME_PAGE_LOGO);
     private final Element clock = new Element(driver, HomePageLocators.CLOCK);
     private final Element newsAlertWindow = new Element(driver, HomePageLocators.NEWS_ALERT_WINDOW);
     private final Link userOfficePageLink = new Link(driver, HomePageLocators.USER_OFFICE_PAGE_LINK);
@@ -48,8 +50,7 @@ public class HomePage extends PageObject<HomePage> {
 
         final String userName = PropertiesReader.getProperty("valid.login");
 
-        getUserOfficePageLink()
-                .getText()
-                .contains(userName);
+        assertThat(getUserOfficePageLink())
+                .textContains(userName);
     }
 }

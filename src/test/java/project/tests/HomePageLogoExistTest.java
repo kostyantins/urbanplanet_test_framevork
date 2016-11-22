@@ -10,8 +10,7 @@ public class HomePageLogoExistTest extends TestRunner {
     @Test
     public final void testHomePageLogoExist() {
 
-        assertThat(homePage
-                .getLogo()
-                .isDisplayed());
+        assertThat(homePage.getHomePageLogo())
+                .isDisplayed();
     }
 }

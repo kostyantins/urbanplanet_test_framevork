@@ -3,19 +3,20 @@ package project.asserts;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import project.elements.wrapers.AbstractClickableElement;
+import project.elements.wrapers.AbstractElement;
 
 import static project.utils.Logger.logFail;
 import static project.utils.Logger.logPass;
 
 public class AbstractElementAssert {
 
-    protected AbstractClickableElement actual;
+    protected AbstractElement actual;
 
-    AbstractElementAssert(final AbstractClickableElement actual) {
+    AbstractElementAssert(final AbstractElement actual) {
         this.actual = actual;
     }
 
-    public static final AbstractElementAssert assertThat(final AbstractClickableElement actual) {
+    public static final AbstractElementAssert assertThat(final AbstractElement actual) {
         return new AbstractElementAssert(actual);
     }
 

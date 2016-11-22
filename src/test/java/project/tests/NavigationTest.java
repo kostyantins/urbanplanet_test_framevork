@@ -2,11 +2,8 @@ package project.tests;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import project.elements.wrapers.AbstractClickableElement;
 import project.pageobjects.AboutUsPage;
-import project.pageobjects.PageObject;
 import project.pageobjects.UserOfficePage;
-import project.utils.DataProvider;
 import project.utils.TestRunner;
 
 import static project.asserts.FluentAssertions.assertThat;
