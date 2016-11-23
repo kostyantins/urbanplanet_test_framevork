@@ -24,11 +24,13 @@ public class DropdownAscendSearchTest extends TestRunner {
         homePage
                 .goTo(homePage.getManClothesPageLink());
 
-        manClothesPage.sortClothesBy(PRICE_ASCEND);
+        manClothesPage
+                .sortClothesBy(PRICE_ASCEND);
 
         final boolean isSortedByAscent = Sort
                 .isListSorted(manClothesPage.getManClothesTablePrices().getElements(), ASCENDANT);
 
-        assertThat(isSortedByAscent).isTrue();
+        assertThat(isSortedByAscent)
+                .isTrue();
     }
 }
