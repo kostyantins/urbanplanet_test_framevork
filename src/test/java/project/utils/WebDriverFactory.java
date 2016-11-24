@@ -38,7 +38,7 @@ public class WebDriverFactory {
         if (isRemote) {
 
             capabilities
-                    .setPlatform(Platform.valueOf(platform));
+                    .setPlatform(Platform.extractFromSysProperty(platform));
 
             capabilities
                     .setBrowserName(String.valueOf(browser));
