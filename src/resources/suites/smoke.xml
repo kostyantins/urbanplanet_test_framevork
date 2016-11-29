@@ -9,16 +9,16 @@
                     <!--<include name="testAboutUsPage"/>-->
                 <!--</methods>-->
             <!--</class>-->
-            <!--<class name="project.tests.HomePageLogoExistTest">-->
-                <!--<methods>-->
-                    <!--<include name="testHomePageLogoExist"/>-->
-                <!--</methods>-->
-            <!--</class>-->
-            <class name="project.tests.ValidUserLogInTest">
+            <class name="project.tests.HomePageLogoExistTest">
                 <methods>
-                    <include name="testValidUserLogIn"/>
+                    <include name="testHomePageLogoExist"/>
                 </methods>
             </class>
+            <!--<class name="project.tests.ValidUserLogInTest">-->
+                <!--<methods>-->
+                    <!--<include name="testValidUserLogIn"/>-->
+                <!--</methods>-->
+            <!--</class>-->
         </classes>
     </test>
 </suite>
