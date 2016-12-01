@@ -9,6 +9,8 @@ import project.elements.locators.UserOfficePageLocators;
 import project.elements.wrapers.AbstractClickableElement;
 import project.elements.wrapers.AbstractElement;
 import project.elements.wrapers.Link;
+import project.enums.PageToGo;
+import project.enums.PageToGoConfirmElement;
 
 @Getter
 public abstract class PageObject<T> {
@@ -27,13 +29,62 @@ public abstract class PageObject<T> {
         userOfficePageLogo = new Link(driver, UserOfficePageLocators.USER_OFFICE_PAGE_LOGO);
     }
 
-    public T goTo(final AbstractClickableElement pageLink){
+    public T goTo(final AbstractClickableElement element) {
 
-        pageLink
+        element
                 .click();
 
         return (T) this;
     }
+
+    public void goToPage(final PageToGo page) {
+
+        final HomePage homePage = new HomePage(driver);
+
+        switch (page) {
+
+            case USER_OFFICE_PAGE:
+
+                homePage
+                        .getUserOfficePageLink()
+                        .click();
+                break;
+
+            case ABOUT_UA_PAGE:
+
+                homePage
+                        .getAboutUsPageLink()
+                        .click();
+                break;
+        }
+    }
+
+    public AbstractElement confirmOf(final PageToGoConfirmElement pageElement) {
+
+        AbstractElement abstractElement = null;
+
+        switch (pageElement) {
+
+            case USER_OFFICE_PAGE_LOGO:
+
+                final UserOfficePage userOfficePage = new UserOfficePage(driver);
+
+                abstractElement = userOfficePage
+                        .getUserOfficePageLogo();
+                break;
+
+            case ABOUT_UA_TEXT_LABEL:
+
+                final AboutUsPage aboutUsPage = new AboutUsPage(driver);
+
+                abstractElement = aboutUsPage
+                        .getAboutUsTextLabel();
+                break;
+        }
+
+        return abstractElement;
+    }
+
 
     public T doLogOut() {
 

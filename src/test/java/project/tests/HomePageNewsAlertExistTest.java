@@ -10,14 +10,6 @@ public class HomePageNewsAlertExistTest extends TestRunner {
     @Test
     public final void testHomePageNewsAlertExist() {
 
-        assertThat(homePage
-                .getNewsAlertWindow()
-                .isDisplayed());
-        homePage
-                .refreshPage();
-
-        assertThat(homePage
-                .getNewsAlertWindow()
-                .isDisplayed());
+        assertThat(homePage.getNewsAlertWindow()).isDisplayed();
     }
 }
